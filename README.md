@@ -82,6 +82,44 @@ All data preparation and transformations were done within Power BI using Power Q
 4. **Insights & Observations**:
    - Analyzed the visualizations to identify anomalies, trends, and potential areas for improvement.
 
+## Task 2 - 3:
+-- SELECT DISTINCT o.user_id
+
+FROM order_lines ol
+
+JOIN orders o ON ol.order_id = o.order_id
+
+JOIN products p ON ol.product_id = p.product_id
+
+WHERE o.order_date BETWEEN '2017-08-01' AND '2017-08-15'
+  
+  AND p.category = 'Animal Feed'
+  
+  AND p.product NOT LIKE 'Kitekat cat food, with rabbit in sauce, 85 g';
+
+
+
+-- SELECT p.product, COUNT(ol.order_id) AS order_count
+
+FROM order_lines ol
+
+JOIN orders o ON ol.order_id = o.order_id
+
+JOIN warehouses w ON o.warehouse_id = w.warehouse_id
+
+JOIN products p ON ol.product_id = p.product_id
+
+WHERE w.city = 'Санкт-Петербург'
+  
+  AND o.order_date BETWEEN '2017-08-15' AND '2017-08-30'
+
+GROUP BY p.product
+
+ORDER BY order_count DESC
+
+LIMIT 5;
+
+
 ## How to Use This Report
 
 1. Open the `.pbix` file in Power BI Desktop.
