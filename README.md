@@ -1,7 +1,9 @@
-# PowerBI_block_FinalProject_Aizhan_Janet_Zhanel_Almas
+# Final project of making Data Visualation with many tools
 PowerBI sales analytics for Final project of the course "Data visualization"
 
 ## Project Overview
+
+
 
 This Power BI report provides a comprehensive analysis of sales data using four datasets:
 - **order_lines.txt**: Contains details about order items (order ID, product ID, price, and quantity).
@@ -70,19 +72,8 @@ All data preparation and transformations were done within Power BI using Power Q
 - **Calculated Columns and Measures**:
   - Created calculated measures like **Total Sales**, **Total Quantity Sold**, and **Average Order Value**.
 
-## Implementation Guide
 
-1. **Import Datasets**:
-   - Imported all four datasets (`order_lines.txt`, `orders.csv`, `products.csv`, `warehouses.csv`) into Power BI.
-2. **Data Transformation**:
-   - Cleaned and transformed the data using Power Query Editor.
-   - Established relationships between tables using `order_id`, `product_id`, and `warehouse_id`.
-3. **Report Design**:
-   - Created visualizations to provide insights into sales performance, product analysis, and warehouse efficiency.
-4. **Insights & Observations**:
-   - Analyzed the visualizations to identify anomalies, trends, and potential areas for improvement.
-
-## Task 2 - 3:
+## 2 - 3:
 -- SELECT DISTINCT o.user_id
 
 FROM order_lines ol
@@ -119,13 +110,3 @@ ORDER BY order_count DESC
 
 LIMIT 5;
 
-
-## How to Use This Report
-
-1. Open the `.pbix` file in Power BI Desktop.
-2. Explore the interactive visuals using filters and slicers (e.g., filter by product category or city).
-3. Review the **Insights & Observations** page to understand key findings.
-
-## Conclusion
-
-This Power BI report offers a detailed analysis of sales data, providing insights into product performance, warehouse efficiency, and market trends. It can be used by stakeholders to make data-driven decisions and identify areas for business growth.
